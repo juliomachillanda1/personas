@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PersonaService {
-    
+
     @Autowired
-    PersonaRepository personaRepository;
+    private PersonaRepository personaRepository;
 
     public List<Persona> buscarTodas() {
         return personaRepository.findAll();
     }
-    
+
 }
