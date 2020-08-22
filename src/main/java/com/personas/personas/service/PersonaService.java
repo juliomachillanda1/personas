@@ -22,4 +22,8 @@ public class PersonaService {
         return personaRepository.save(persona);
     }
 
+    public void eliminarPorId(Long personaId) {
+        personaRepository.deleteById(personaId);
+    }
+
 }
