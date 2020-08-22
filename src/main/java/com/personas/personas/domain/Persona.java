@@ -18,7 +18,7 @@ public class Persona {
 
     public Persona() {
     }
-    
+
     public Persona(Long id, String nombre, String apellido, int edad, char sexo) {
         this.id = id;
         this.nombre = nombre;

@@ -37,4 +37,13 @@ public class PersonaServiceTest {
         assertThat(personas).isEmpty();
     }
 
+    @Test
+    public void crear_conCamposRequeridos_retornaPersonaCreada() {
+        Persona persona = new Persona(null, "Paola", "Perez", 21, 'F');
+
+        Persona personaNueva = personaService.crear(persona);
+
+        assertThat(personaNueva.getId()).isNotNull();
+    }
+
 }
