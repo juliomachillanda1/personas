@@ -1,12 +1,10 @@
-package com.personas.personas;
+package com.personas.personas.service;
 
 import com.personas.personas.domain.Persona;
 import com.personas.personas.repository.PersonaRepository;
-import com.personas.personas.service.PersonaService;
 import java.util.List;
 import javax.transaction.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
