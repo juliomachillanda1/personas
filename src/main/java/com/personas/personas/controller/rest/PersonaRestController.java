@@ -3,6 +3,7 @@ package com.personas.personas.controller.rest;
 import com.personas.personas.domain.Persona;
 import com.personas.personas.service.PersonaService;
 import java.util.List;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +25,7 @@ public class PersonaRestController {
 
     @PostMapping("/personas")
     @ResponseStatus(HttpStatus.CREATED)
-    public Persona crear(@RequestBody Persona persona) {
+    public Persona crear(@Valid @RequestBody Persona persona) {
         return personaService.crear(persona);
     }
 }

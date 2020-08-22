@@ -6,6 +6,7 @@ import com.personas.personas.service.PersonaService;
 import java.util.List;
 import javax.transaction.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -37,7 +38,6 @@ public class PersonaServiceTest {
         assertThat(personas).isEmpty();
     }
 
-    @Test
     public void crear_conCamposRequeridos_retornaPersonaCreada() {
         Persona persona = new Persona(null, "Paola", "Perez", 21, 'F');
 

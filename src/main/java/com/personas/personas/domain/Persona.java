@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Persona {
@@ -11,10 +13,14 @@ public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "El nombre es obligatorio")
     private String nombre;
+    @NotBlank(message = "El apellido es obligatorio")
     private String apellido;
-    private int edad;
-    private char sexo;
+    @NotNull(message = "La edad es obligatoria")
+    private Integer edad;
+    @NotNull(message = "El sexo es obligatorio")
+    private Character sexo;
 
     public Persona() {
     }
